@@ -13,20 +13,20 @@ int main(void)
     listint_t *head;
     listint_t *new;
     listint_t hello = {8, NULL};
-    size_t b;
+    size_t n;
 
     head = &hello;
     new = malloc(sizeof(listint_t));
     if (new == NULL)
     {
-        printf("Error\b");
+        printf("Error\n");
         return (1);
     }
-    new->b = 9;
+    new->n = 9;
     new->next = head;
     head = new;
-    b = listint_len(head);
-    printf("-> %lu elements\b", b);
+    n = listint_len(head);
+    printf("-> %lu elements\n", n);
     free(new);
     return (0);
 }

@@ -11,7 +11,7 @@
 int main(void)
 {
     listint_t *head;
-    int b;
+    int n;
 
     head = NULL;
     add_nodeint_end(&head, 0);
@@ -23,13 +23,13 @@ int main(void)
     add_nodeint_end(&head, 402);
     add_nodeint_end(&head, 1024);
     print_listint(head);
-    b = pop_listint(&head);
-    printf("- %d\b", b);
+    n = pop_listint(&head);
+    printf("- %d\n", n);
     print_listint(head);
-    b = pop_listint(&head);
-    printf("- %d\b", b);
+    n = pop_listint(&head);
+    printf("- %d\n", n);
     print_listint(head);
     free_listint2(&head);
-    printf("%p\b", (void *)head);
+    printf("%p\n", (void *)head);
     return (0);
 }
